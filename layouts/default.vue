@@ -1,1 +1,6 @@
-<template><Nuxt /></template>
+<template>
+  <div>
+    <HeaderPage />
+    <Nuxt />
+  </div>
+</template>

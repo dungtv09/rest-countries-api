@@ -1,3 +1,17 @@
 body {
   font-family: 'Nunito Sans', sans-serif;
+  background-color: $very-light-gray;
+  color: $very-dark-blue-light-mode;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
 }
