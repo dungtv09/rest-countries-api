@@ -8,7 +8,11 @@
 
     <div class="bottom-page container">
       <ul class="card-list">
-        <li v-for="(country, index) in filteredCountries" :key="index">
+        <li
+          v-for="(country, index) in filteredCountries"
+          :key="index"
+          class="mb-3"
+        >
           <NuxtLink
             :to="{
               name: 'country',
