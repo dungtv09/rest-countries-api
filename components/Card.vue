@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <img :src="country.flag" class="card-img-top" alt="Country Flag" />
-    <div class="card-body pt-5 px-4 pb-5 border-top">
+    <div class="card-body pt-4 px-4 pb-5 border-top">
       <div class="card-text">
         <h5 class="font-weight-bold mb-3">{{ country.name }}</h5>
         <ul>
@@ -34,18 +34,36 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  width: 330px;
+  width: 240px;
   transition: box-shadow 0.3s ease;
   img {
-    height: 220px;
+    height: 160px;
   }
   &:hover {
     box-shadow: 1px 8px 20px grey;
   }
 }
 .card-text {
-  height: 130px;
+  height: 120px;
   color: $very-dark-blue-light-mode;
+}
+
+@media (max-width: 991px) {
+  .card {
+    width: 300px;
+    img {
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    width: 390px;
+    img {
+      height: 260px;
+    }
+  }
 }
 
 @media (max-width: 540px) {

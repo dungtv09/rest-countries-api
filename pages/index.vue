@@ -8,17 +8,14 @@
 
     <div class="bottom-page container">
       <ul class="card-list">
-        <li
-          v-for="(country, index) in filteredCountries"
-          :key="index"
-          class="mb-4"
-        >
+        <li v-for="(country, index) in filteredCountries" :key="index">
           <NuxtLink
             :to="{
               name: 'country',
               params: { country: country.alpha3Code },
             }"
             :country="country"
+            class=".card"
           >
             <Card :country="country" />
           </NuxtLink>
@@ -43,13 +40,9 @@ export default {
   justify-content: space-between;
 }
 .card-list {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 40px;
 }
-@media (max-width: 767px) {
-  .card-list {
-    justify-content: center;
-  }
-} ;
 </style>
