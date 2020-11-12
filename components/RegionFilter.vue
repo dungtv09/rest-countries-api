@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="region-filter">
     <button
       id="dropdownMenuButton"
       class="btn btn-secondary dropdown-toggle shadow-sm form-control"
@@ -8,7 +8,7 @@
       aria-haspopup="true"
       aria-expanded="false"
     >
-      {{ regionSelected }}
+      {{ !regionSelected ? 'Filter by Region' : regionSelected }}
     </button>
 
     <div

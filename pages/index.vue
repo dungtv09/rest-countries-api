@@ -1,15 +1,23 @@
 <template>
   <div>
-    <div class="top-page container mt-5 form-inline">
+    <div class="top-page container mt-5 mb-5 form-inline">
       <SearchForm />
 
       <RegionFilter />
     </div>
 
-    <div class="bottom-page container mt-5">
+    <div class="bottom-page container">
       <ul class="card-list">
         <li v-for="(country, index) in filteredCountries" :key="index">
-          <router-link to="/"> <Card :country="country" /> </router-link>
+          <NuxtLink
+            :to="{
+              name: 'country',
+              params: { country: country.alpha3Code },
+            }"
+            :country="country"
+          >
+            <Card :country="country" />
+          </NuxtLink>
         </li>
       </ul>
     </div>
@@ -33,5 +41,6 @@ export default {
 .card-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 </style>

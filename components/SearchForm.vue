@@ -1,6 +1,6 @@
 <template>
-  <form class="form-control search-form shadow-sm">
-    <i class="fas fa-search ml-3 mr-2"></i>
+  <form class="form-control search-form shadow-sm" @submit.prevent="">
+    <div class="icon"><i class="fas fa-search ml-3 mr-2"></i></div>
     <input
       v-model="searchInput"
       type="text"
@@ -8,7 +8,7 @@
       class="search-input"
       @input="filterCountries"
     />
-    <i class="fas fa-times" @click="clearInput"></i>
+    <div class="icon"><i class="fas fa-times" @click="clearInput"></i></div>
   </form>
 </template>
 
@@ -48,15 +48,16 @@ export default {
 .search-form {
   border: none;
   border-radius: 3px;
-  display: inline-block;
   background-color: $white;
+  width: 400px;
+  display: grid;
+  grid-template-columns: 50px auto 15px;
 }
 .fa-search {
   color: grey;
 }
 .search-input {
   border: none;
-  width: 300px;
   color: $dark-gray;
   &:focus {
     outline: none;
@@ -64,5 +65,16 @@ export default {
 }
 .fa-times {
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .search-form {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 520px) {
+  .search-form {
+    width: 100%;
+  }
 }
 </style>

@@ -2,7 +2,7 @@ const state = () => ({
   countries: null,
   filteredCountries: null,
   searchInput: '',
-  regionSelected: 'Filter by Region',
+  regionSelected: '',
 })
 
 const getters = {
@@ -44,7 +44,7 @@ const actions = {
 
   filterCountries({ commit, getters }, { searchInput, regionSelected }) {
     let filteredCountries = []
-    if (regionSelected === 'All' || regionSelected === 'Filter by Region') {
+    if (regionSelected === 'All' || regionSelected === '') {
       filteredCountries = getters.countries.filter((country) => {
         return country.name.toLowerCase().includes(searchInput.toLowerCase())
       })
