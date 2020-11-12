@@ -11,7 +11,7 @@
         <li
           v-for="(country, index) in filteredCountries"
           :key="index"
-          class="mb-3"
+          class="mb-4"
         >
           <NuxtLink
             :to="{
@@ -47,4 +47,9 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 767px) {
+  .card-list {
+    justify-content: center;
+  }
+} ;
 </style>
