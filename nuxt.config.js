@@ -52,6 +52,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/color-mode',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -63,7 +64,6 @@ export default {
 
   styleResources: {
     // your settings here
-    scss: ['~/assets/stylesheets/_variables.scss'],
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

@@ -48,17 +48,19 @@ export default {
 .search-form {
   border: none;
   border-radius: 3px;
-  background-color: $white;
+  background-color: var(--element);
   width: 400px;
   display: grid;
   grid-template-columns: 50px auto 15px;
 }
-.fa-search {
-  color: grey;
+.fa-search,
+.fa-times {
+  color: var(--color);
 }
 .search-input {
   border: none;
-  color: $dark-gray;
+  background-color: var(--element);
+  color: var(--color);
   &:focus {
     outline: none;
   }

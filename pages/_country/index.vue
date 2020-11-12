@@ -93,8 +93,8 @@ export default {
 .back-btn {
   border: none;
   border-radius: 3px;
-  background-color: $white;
-  color: $very-dark-blue-light-mode;
+  background-color: var(--element);
+  color: var(--color);
 }
 .main {
   display: flex;
@@ -113,8 +113,8 @@ export default {
 .border-country-btn {
   border: none;
   border-radius: 3px;
-  background-color: $white;
-  color: $very-dark-blue-light-mode;
+  background-color: var(--element);
+  color: var(--color);
 }
 
 @media (max-width: 560px) {

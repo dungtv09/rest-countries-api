@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <img :src="country.flag" class="card-img-top" alt="Country Flag" />
-    <div class="card-body pt-4 px-4 pb-5 border-top">
+    <div class="card-body pt-4 px-4 pb-5">
       <div class="card-text">
         <h5 class="font-weight-bold mb-3">{{ country.name }}</h5>
         <ul>
@@ -36,6 +36,7 @@ export default {
 .card {
   width: 240px;
   transition: box-shadow 0.3s ease;
+  background-color: var(--element);
   img {
     height: 160px;
   }
@@ -45,7 +46,7 @@ export default {
 }
 .card-text {
   height: 120px;
-  color: $very-dark-blue-light-mode;
+  color: var(--color);
 }
 
 @media (max-width: 991px) {

@@ -4,23 +4,45 @@
       <NuxtLink to="/" class="navbar-brand mb-0 h1 font-weight-bold"
         >Where in the world?</NuxtLink
       >
-      <span class="mode mb-0"
-        ><i class="fas fa-moon"></i><span class="ml-2">Dark mode</span></span
+      <span class="color-mode mb-0" @click="changeColorMode"
+        ><i class="fas fa-moon"></i
+        ><span class="ml-2">{{ colorMode }}</span></span
       >
-      <!-- <span class="mb-0"
-        ><i class="far fa-moon"></i><span class="ml-2">Light mode</span></span
-      > -->
     </div>
   </nav>
 </template>
 
+<script>
+export default {
+  data() {
+    return { colorMode: 'Dark Mode' }
+  },
+
+  methods: {
+    changeColorMode() {
+      if (this.colorMode === 'Dark Mode') {
+        this.colorMode = 'Light Mode'
+        this.$colorMode.preference = 'dark'
+      } else {
+        this.colorMode = 'Dark Mode'
+        this.$colorMode.preference = 'light'
+      }
+    },
+  },
+}
+</script>
+
 <style lang="scss" scoped>
 nav {
-  background-color: $white;
+  background-color: var(--element);
   a {
-    color: $very-dark-blue-light-mode;
+    color: var(--color);
   }
 }
+.color-mode {
+  cursor: pointer;
+}
+
 @media (max-width: 368px) {
   .mode {
     font-size: 12px;

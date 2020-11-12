@@ -53,8 +53,8 @@ export default {
   border: none;
   border-radius: 3px;
   display: inline-block;
-  background-color: $white;
-  color: $very-dark-blue-light-mode;
+  background-color: var(--element);
+  color: var(--color);
   width: 200px;
   &:focus {
     outline: none;
