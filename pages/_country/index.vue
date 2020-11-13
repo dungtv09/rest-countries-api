@@ -76,7 +76,7 @@
     <div id="map-wrap" style="height: 500px" class="mt-5">
       <h4 class="map-title font-weight-bold mt-3">Map:</h4>
       <client-only>
-        <l-map :zoom="5" :center="[country.latlng[0], country.latlng[1]]">
+        <l-map :zoom="3" :center="[country.latlng[0], country.latlng[1]]">
           <l-tile-layer
             url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
           ></l-tile-layer>
