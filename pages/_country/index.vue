@@ -139,6 +139,7 @@ export default {
 }
 .country--info--list {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
 }
 
